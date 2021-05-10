@@ -493,14 +493,18 @@ img {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: var(--alt-text-cl);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.close-modal {
-  fill: #000000;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.close-modal-container:hover {
+  border-color: var(--alt-text-cl);
+  fill: var(--accent-cl);
 }
 
+.close-modal {
+  fill: var(--logo-link-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .link-card {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -684,18 +688,25 @@ img {
   transition: background-color 250ms var(--main-cubic),
     border-color 250ms var(--main-cubic);
 }
+.checkbox:checked ~ * .checkbox-icon {
+  opacity: 1;
+}
 .checkbox-icon {
   display: block;
   width: 100%;
   height: 100%;
   border: none;
   background-color: transparent;
-  background-image: url(https://hryhorii-humennyi.github.io/goit-markup-hw-06/images/icons/check.svg.html);
+  background-image: url(../images/icons/check.svg);
   background-origin: border-box;
   background-size: 120%;
   background-position: center;
   opacity: 0;
   transition: opacity 250ms var(--main-cubic);
+}
+.checkbox:checked + .custom-checkbox {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 .link-agreement {
   color: var(--accent-cl);
