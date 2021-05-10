@@ -697,7 +697,7 @@ img {
   height: 100%;
   border: none;
   background-color: transparent;
-  background-image: url(../images/icons/check.svg);
+  background-image: url(../images/check.svg);
   background-origin: border-box;
   background-size: 120%;
   background-position: center;
