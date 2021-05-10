@@ -7,6 +7,7 @@
   --color-border-portfolio: #eeeeee;
   --dark-bg: #2f303a;
   --second-bg: #f5f4fa;
+  --logo-link-color: #000000;
   --team-icon-color: #afb1b8;
   --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -23,6 +24,7 @@
   --emblem-font: "Raleway", sans-serif;
   --title-font: "Roboto", sans-serif;
   --border-input-email: rgba(255, 255, 255, 0.3);
+  --color-modal-input-border: rgba(33, 33, 33, 0.2);
 }
 html {
   box-sizing: border-box;
@@ -142,6 +144,7 @@ img {
   display: inline-block;
   border-color: transparent;
   border-radius: 4px;
+  cursor: pointer;
   font-family: var(--title-font);
   font-weight: bold;
   font-size: 16px;
@@ -169,6 +172,7 @@ img {
 }
 .btn-hero {
   display: inline-block;
+  cursor: pointer;
   min-width: 200px;
   padding: 10px 32px;
   border-radius: 4px;
@@ -585,6 +589,7 @@ img {
 }
 .button-primary {
   display: inline-block;
+  cursor: pointer;
   min-width: 200px;
   padding: 10px 32px;
   border-radius: 4px;
@@ -606,4 +611,99 @@ img {
   fill: var(--alt-text-cl);
   min-height: 50px;
   margin-left: 12px;
+}
+.icon-send {
+  margin-left: 10px;
+}
+.modal-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-cl);
+}
+.list-modal {
+  margin-bottom: 30px;
+  list-style: none;
+}
+.list-modal__item {
+  margin-bottom: 10px;
+}
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.modal-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--main-text-cl);
+}
+.modal-input {
+  padding: 11px 35px;
+  border: 1px solid var(--color-modal-input-border);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border-color 250ms var(--main-cubic);
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transition: fill 250ms var(--main-cubic);
+}
+.agreement {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.checkbox {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--logo-link-color);
+  margin-right: 8px;
+  transition: background-color 250ms var(--main-cubic),
+    border-color 250ms var(--main-cubic);
+}
+.checkbox-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  background-image: url(https://hryhorii-humennyi.github.io/goit-markup-hw-06/images/icons/check.svg.html);
+  background-origin: border-box;
+  background-size: 120%;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 250ms var(--main-cubic);
+}
+.link-agreement {
+  color: var(--accent-cl);
+  margin-left: 3px;
+}
+.button-modal {
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
+  transition: box-shadow 250ms var(--main-cubic);
 }
