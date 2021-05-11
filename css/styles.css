@@ -498,11 +498,14 @@ img {
 }
 .close-modal-container:hover {
   border-color: var(--alt-text-cl);
+  color: var(--accent-cl);
+}
+.close-modal-container:hover.close-modal {
   fill: var(--accent-cl);
 }
 
 .close-modal {
-  fill: var(--logo-link-color);
+  fill: currentColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-card {
@@ -653,7 +656,16 @@ img {
   box-sizing: border-box;
   border-radius: 4px;
   transition: border-color 250ms var(--main-cubic);
+  outline: none;
 }
+.modal-input:focus {
+  border: 1px solid var(--accent-cl);
+}
+.modal-input:focus ~ .input-icon {
+  fill: var(--accent-cl);
+  border-color: var(--accent-cl);
+}
+
 .input-icon {
   position: absolute;
   top: 50%;
