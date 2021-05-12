@@ -448,6 +448,7 @@ img {
   display: flex;
   bottom: 0;
   width: 100%;
+  font-weight: 700;
   height: 70px;
   justify-content: center;
   align-items: center;
@@ -594,6 +595,9 @@ img {
   left: 17px;
   transform: translateY(-50%);
 }
+.input-email:focus ~ .subscribe-label {
+  opacity: 0;
+}
 .button-primary {
   display: inline-block;
   cursor: pointer;
@@ -716,6 +720,9 @@ img {
   opacity: 0;
   transition: opacity 250ms var(--main-cubic);
 }
+.checkbox:checked ~ .custom-checkbox {
+  border: none;
+}
 .checkbox:checked + .custom-checkbox {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
@@ -729,4 +736,12 @@ img {
   margin-right: 50%;
   transform: translateX(-50%);
   transition: box-shadow 250ms var(--main-cubic);
+}
+.modal-textarea {
+  padding-top: 12px;
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
